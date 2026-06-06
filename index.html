@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div>
+        <h1>Task Manager: <span id="organizaTxt">organiza tu día</span></h1>
+        <p>Contador de tareas: <span id="contador">0</span></p>
+        <input type="text" placeholder="Nombre de la tarea" id="nombre-tarea">
+        <span id="error">El campo no puede estar vacío</span>
+        <input type="text" placeholder="Nombre de la categoria" id="nombre-categoria">
+        <span id="error">El campo no puede estar vacío</span>
+        <select name="opciones" id="categoria" >
+            <option value="">Seleccione una categoria</option>
+            <option value="opc1">Trabajo 💻</option>
+            <option value="opc2">Estudio 📚</option>
+            <option value="opc3">Personal 🧟‍♂️</option>
+            <option value="opc4">Urgente❗</option>
+            <option value="opc4">Otra...❔</option>
+        </select>
+        <button id="agregar-task">Agregar tarea</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

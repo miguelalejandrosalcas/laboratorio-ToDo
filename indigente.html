@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Juan está troste</h1>
+    <input type="text" id="cuadro-texto">
+    <span id="error">Error, los campos no pueden estar vacíos</span>
+    <input type="text" id="cuadro-categoria-nueva">
+    <span id="error">Error, los campos no pueden estar vacíos</span>
+    <select name="categoria" id="categorias-lista">
+        <option value="opcion1">Trabajo</option>
+        <option value="opcion1">Estudio</option>
+        
+        <option value="opcion1">Personal</option>
+        <option value="opcion1">Urgente</option>
+        <option value="opcion1">Otra...</option>
+    </select>
+    <button id="btn-agregar">Agregar</button>
+    <button id="btn-hecha" onclick="confirmar()">Hecha</button>
+    <button id="btn-urgente" onclick="confirmar()">Urgente</button>
+    <button id="btn-eliminar" onclick="confirmar()">Eliminar</button>
+    <script src="script.js"></script>
+</body>
+</html>
