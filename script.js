@@ -62,7 +62,6 @@ btnAgregar.addEventListener('click', function () {
             if (activo === true){
                 nuevaCard.remove();
             }
-                
         });
         // Funcionalidad 1: Eliminar esta tarjeta específica
         botonEliminar.addEventListener('click', () => {

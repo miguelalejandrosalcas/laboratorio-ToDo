@@ -1,3 +1,16 @@
+.contenedor-general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgb(65, 137, 168);
+}
+
 #error {
     display: none;
 }
@@ -27,4 +40,17 @@
 }
 .btn-limpiar {
     display: none;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+select {
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

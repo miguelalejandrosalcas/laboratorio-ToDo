@@ -1,31 +1,37 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Laboratorio</h1>
-    <p>Contador: <span id="contador-span"> </span></p>
-    <h3>Nombre de la tarea</h3>
-    <input type="text" id="cuadro-texto" placeholder="Escribe el nombre de la tarea">
-    <span id="error">Error, el campo no puede estar vacío</span>
-    <h3 id="nombre-categoria">Nombre de la categoria</h3>
-    <input type="text" id="cuadro-categoria-nueva" placeholder="Nombre de la categoria">
-    <span id="error">Error, el campo no puede estar vacío</span>
-    <select name="categoria" id="categorias-lista">
-        <option value="">-- Elige una opción --</option>
-        <option value="opcion1">Trabajo 💻</option>
-        <option value="opcion2">Estudio 📚</option>
-        <option value="opcion3">Personal 🧟‍♂️</option>
-        <option value="opcion4">Urgente❗</option>
-        <option value="opcion5">Otra...❔</option>
-    </select>
-    <button id="btn-agregar">Agregar</button>
-    <button class="btn-limpiar">Limpiar completadas</button>
-    <div></div>
-    <div id="contenedor"></div>
+    <div class="contenedor-general">
+        <h1>Laboratorio</h1>
+        <p>Contador: <span id="contador-span"> </span></p>
+        <h3>Nombre de la tarea</h3>
+        <input type="text" id="cuadro-texto" placeholder="Escribe el nombre de la tarea">
+        <span id="error">Error, el campo no puede estar vacío</span>
+        <h3 id="nombre-categoria">Nombre de la categoria</h3>
+        <input type="text" id="cuadro-categoria-nueva" placeholder="Nombre de la categoria">
+        <span id="error">Error, el campo no puede estar vacío</span>
+        <select name="categoria" id="categorias-lista">
+            <option value="">-- Elige una opción --</option>
+            <option value="opcion1">Trabajo 💻</option>
+            <option value="opcion2">Estudio 📚</option>
+            <option value="opcion3">Personal 🧟‍♂️</option>
+            <option value="opcion4">Urgente❗</option>
+            <option value="opcion5">Otra...❔</option>
+        </select>
+        <button id="btn-agregar">Agregar</button>
+        <button class="btn-limpiar">Limpiar completadas</button>
+        <div></div>
+        <div id="contenedor"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
