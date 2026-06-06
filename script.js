@@ -7,6 +7,8 @@ let nombreCategoria = document.getElementById('nombre-categoria');
 let cuadroTexto = document.getElementById('cuadro-texto');
 let spanError = document.getElementById('error');
 let contenedorCard = document.getElementById('contenedor');
+let botonLimpiar = document.querySelector('.btn-limpiar');
+
 
 let opcionSeleccionada = opcion.value;
 let txtOpcion = opcion.options[opcion.selectedIndex];
@@ -16,16 +18,18 @@ let contadorCardTarea = 1;
 let tareas = [];
 
 btnAgregar.addEventListener('click', function () {
+    
     let opcion = "";
     if (cuadroTexto.value.trim() === "") {
         spanError.style.display = "block";
         spanError.style.color = "red";
     } 
     else {
+        spanError.style.display = "none";
         // 1. Creamos la base de la tarjeta
         const nuevaCard = document.createElement('div');
         nuevaCard.classList.add('card');
-
+        
         // 2. Inyectamos el HTML (incluyendo los nuevos botones)
         nuevaCard.innerHTML = `
         <div class="contenedor-card">
@@ -46,10 +50,20 @@ btnAgregar.addEventListener('click', function () {
         const botonHecho = nuevaCard.querySelector('.btn-hecho');
         const botonUrgente = nuevaCard.querySelector('.btn-urgente');
         const botonEliminar = nuevaCard.querySelector('.btn-eliminar');
-        const cardContenedor = nuevaCard.querySelector('.contenedor-card')
+        const cardContenedor = nuevaCard.querySelector('.contenedor-card');
+        //const botonLimpiar = nuevaCard.querySelector('.btn-limpiar');
 
-        // 4. ASIGNAMOS LAS FUNCIONALIDADES
-
+        // botonLimpiar.addEventListener('click', () => {
+        //     if (nuevaCard.style)
+        //     nuevaCard.remove();
+        // });
+        botonLimpiar.style.display = "block";
+        botonLimpiar.addEventListener('click', () => {
+            if (activo === true){
+                nuevaCard.remove();
+            }
+                
+        });
         // Funcionalidad 1: Eliminar esta tarjeta específica
         botonEliminar.addEventListener('click', () => {
             let resultado = confirm("¿Estás seguro de eliminar la tarea?");
@@ -59,15 +73,19 @@ btnAgregar.addEventListener('click', function () {
                 contadorSpan.innerText = contador;
             }
         });
-
+        let activo = false;
         // Funcionalidad 2: Modificar el estilo visual de esta tarjeta
         botonHecho.addEventListener('click', () => {
+            
             botonHecho.style.border= "2px solid #ff5722";
             botonHecho.style.backgroundColor = "#04f695";
             botonHecho.style.color = "white";
             cardContenedor.style.backgroundColor = "#00701a";
             contador--;
             contadorSpan.innerText = contador;
+            botonUrgente.removeAttribute('style');
+            activo = true;
+            
         });
 
         botonUrgente.addEventListener('click', () => {
@@ -75,6 +93,7 @@ btnAgregar.addEventListener('click', function () {
             botonUrgente.style.backgroundColor = "red";
             cardContenedor.style.backgroundColor = "#bd7b00";
             botonUrgente.style.color = "white";
+            botonHecho.removeAttribute('style');
         });
 
         // 5. Finalmente, agregamos la tarjeta con sus funciones listas al contenedor
@@ -84,6 +103,8 @@ btnAgregar.addEventListener('click', function () {
         contadorSpan.innerText = contador;
     }
 });
+
+
 
 opcion.addEventListener('change', function () {
     // const valorSeleccionado = evento.target.value;

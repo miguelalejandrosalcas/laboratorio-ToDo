@@ -25,3 +25,6 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.btn-limpiar {
+    display: none;
+}
