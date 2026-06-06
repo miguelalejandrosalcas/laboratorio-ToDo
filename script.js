@@ -14,5 +14,5 @@ function confirmar() {
 }
 
 btnUrgente.addEventListener('click', function() {
-    btnUrgente.style.backgroundColor = "red";
+    btnUrgente.style.backgroundColor = "redsdfdsfsd";
 })
